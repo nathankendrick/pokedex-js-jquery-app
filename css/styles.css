@@ -154,6 +154,7 @@ Secondary Color (Fuchsia/Salmon): #B73B64
   background: none;
   color: #777;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .modal h1 {

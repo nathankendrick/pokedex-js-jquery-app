@@ -54,7 +54,7 @@ var pokemonRepository = (function () {
             responseJSON.results.forEach(function (item) {
                 var pokemon = {
                     name: item.name,
-                    detailsURL: item.url
+                    detailsURL: item.url,
                 };
                 add(pokemon);
             });
@@ -64,7 +64,7 @@ var pokemonRepository = (function () {
         }
 
     function loadDetails(item) {
-        var url = item.detailsUrl;
+        var url = item.detailsURL;
 
         return $.ajax(url,
 			{dataType: 'json'})
@@ -76,6 +76,10 @@ var pokemonRepository = (function () {
             item.imageUrl = details.sprites.front_default;
             item.species = details.species;
             item.height = details.height/10*3.28084;
+            item.types = details.types.map(function(object) {
+                return ' ' + object.type.name;
+            });
+
         }).catch(function (e) {
             console.error(e);
         });
@@ -96,14 +100,17 @@ var pokemonRepository = (function () {
             hideModal();
         })
 
+        
         //modal content (Pokemon Data)
         var pokemonName = $('<h1>' + item.name + '</h1>');
         var pokemonSprite = $('<p><img src="' + item.imageUrl + '" class="pokemon-sprite"></p>');
-        var pokemonHeight = $('<p>' + item.height + ' feet tall</p>');
+        var pokemonHeight = $('<p>' + item.height.toFixed(1) + ' Feet Tall</p>');
+        var pokemonTypes = $('<p class="type-list">Type(s): ' +item.types + '</p>');
 
         modal.append(pokemonName);
         modal.append(pokemonSprite);
         modal.append(pokemonHeight);
+        modal.append(pokemonTypes);
 
         //OLD below for reference until I'm finished getting it all working
 

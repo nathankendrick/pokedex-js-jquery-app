@@ -157,6 +157,10 @@ Secondary Color (Fuchsia/Salmon): #B73B64
   cursor: pointer;
 }
 
+.type-list {
+  text-transform: uppercase;
+}
+
 .modal h1 {
   margin-top: 0;
 }

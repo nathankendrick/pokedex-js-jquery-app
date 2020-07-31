@@ -10,17 +10,22 @@ Secondary Color (Fuchsia/Salmon): #B73B64
   }
 
   body {
-      background-color: rgb(221,0,0);
+    background: rgb(131,0,0);
+    background: radial-gradient(circle, rgba(131,0,0,1) 21%, rgba(180,12,12,1) 90%);
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 600;
       font-size: 22px;
       color: #FFFFFF;
   }
+
   h1 {
-      font-size: 26px;
+      font-size: 35px;
       font-weight: 800;
       color: rgb(221,0,0);
       text-align: left;
+      text-transform: uppercase;
+      font-family: 'Quantico', sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.20);
     }
 
   hr {
@@ -45,142 +50,91 @@ Secondary Color (Fuchsia/Salmon): #B73B64
       color: red;
   }
 
-  .app-container {
-      margin: 0 auto;
-      width: 660px;
-      background-color: #FFFFFF;
-      margin-top: 60px;
-      border-radius: 10px;
-      box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.3);
-  }
-
-  .app-header {
-      text-align: center;
-      background-color: black;
-  }
-
-  .header-image {
-      width: 660px;
-  }
-
-  .app-banner {
-      width: "100%";
-  }
-
-  .data-window {
-      padding: 20px;
-      font-size: 20px;
-      color: #000000;
-  }
-
-  .search {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-
-  .searchbox {
-    text-align: right;
-  }
-
-  .pokedex {
-    width: 100%;
-    background-color: white;
-    list-style: none;
-    padding-right: 40px;
-  }
-
   li {
     padding: 5px;
   }
 
-  .list-button {
+  .header-image {
     width: 100%;
-    height: 50px;
-    background-color: #373937;
-    color: white;
-    border: 0;
-    border-radius: 7px;
     box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
   }
 
-  .list-button:hover {
-    background-color: gray;
-    transition: 200ms;
+  .pokedex {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background: rgb(235,235,235);
+    background: radial-gradient(circle, rgba(235,235,235,1) 21%, rgba(255,255,255,1) 90%);
+    box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
   }
 
-  .list-button:first-letter {
+  .btn:first-letter {
     text-transform: uppercase;
   }
 
-#modal-container {
-  display: none;
-}
+  .btn-secondary {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  }
 
-#modal-container.is-visible {
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999; 
-  overflow: auto; 
-  display: grid;
-  text-align: center;
-}
+  .navbar {
+    box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+  }
 
-.modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
+  .navbar-collapse {
+    justify-content: center;
+  }
 
-.modal:first-letter {
-  text-transform: uppercase;
-}
+  .sprite-container {
+    background: rgb(74,167,11);
+    background: linear-gradient(360deg, rgba(74,167,11,0.6965161064425771) 0%, rgba(40,154,0,0.6629026610644257) 38%, rgba(249,252,9,0.17270658263305327) 56%, rgba(0,247,255,0.654499299719888) 100%);
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.55);
+  }
 
-.modal-close {
-  float: right;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
-  cursor: pointer;
-}
+  .pokemon-sprite {
+    width: 220px;
+  }
 
-.type-list {
-  text-transform: uppercase;
-}
+  .info-text {
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-left: 40px;
+    color: #181615;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.30);
+  }
 
-.modal h1 {
-  margin-top: 0;
-}
+  .type-list {
+    text-transform: uppercase;
+    color: #181615;
+  }
 
-.modal p {
-  margin-bottom: 0;
-}
+  .list-group {
+    justify-self:  right;
+  }
 
-.pokemon-sprite {
-  width: 220px;
-}
-
-  @media screen and (max-width: 700px) {
-    .app-container {
-        width: 95%;
+  /* Additional responsiveness for best performance on very small screens */
+  @media all and (min-width: 0px) and (max-width: 505px) {
+    .sprite-container {
+      background: white;
+      box-shadow: none;
     }
-    .header-image {
-        width: 100%;
+
+    .pokemon-sprite {
+      width: 140px;
     }
-    .data-window {
-        font-size: 16px;
+
+    h1 {
+      font-size: 25px;
+      text-shadow: none;
+    }
+
+    body {
+      font-size: 20px;
+    }
+
+    .info-text {
+      text-shadow: none;
     }
   }

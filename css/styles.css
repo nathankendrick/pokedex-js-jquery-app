@@ -54,6 +54,16 @@ Secondary Color (Fuchsia/Salmon): #B73B64
     padding: 5px;
   }
 
+  .container {
+    border: rgb(26, 26, 26) 2px solid;
+    padding: 0px;
+    background-color: #464141;
+  }
+
+  .selected {
+    background-color: indianred;
+  }
+
   .header-image {
     width: 100%;
     box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
@@ -82,6 +92,7 @@ Secondary Color (Fuchsia/Salmon): #B73B64
 
   .navbar {
     box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 0%;
   }
 
   .navbar-collapse {

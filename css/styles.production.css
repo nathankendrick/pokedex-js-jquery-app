@@ -1,0 +1,176 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* Colors
+
+Primary Color (Teal): #106A74
+Secondary Color (Fuchsia/Salmon): #B73B64
+
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  body {
+    background: rgb(131,0,0);
+    background: -o-radial-gradient(circle, rgba(131,0,0,1) 21%, rgba(180,12,12,1) 90%);
+    background: radial-gradient(circle, rgba(131,0,0,1) 21%, rgba(180,12,12,1) 90%);
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: #FFFFFF;
+  }
+
+  h1 {
+      font-size: 35px;
+      font-weight: 800;
+      color: rgb(221,0,0);
+      text-align: left;
+      text-transform: uppercase;
+      font-family: 'Quantico', sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.50);
+    }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: gray;
+  }
+  
+  a {
+    color: #FFFFFF;
+  }
+  
+  a:hover, a:focus {
+    text-decoration: none;
+  }
+  
+  a:visited {
+      color: #FFFFEE;
+  }
+  
+  a:active {
+      color: red;
+  }
+
+  li {
+    padding: 5px;
+  }
+
+  .container {
+    border: rgb(26, 26, 26) 2px solid;
+    padding: 0px;
+    background-color: #464141;
+  }
+
+  .selected {
+    background-color: indianred;
+  }
+
+  .header-image {
+    width: 100%;
+    -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+            box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .pokedex {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background: rgb(235,235,235);
+    background: -o-radial-gradient(circle, rgba(235,235,235,1) 21%, rgba(255,255,255,1) 90%);
+    background: radial-gradient(circle, rgba(235,235,235,1) 21%, rgba(255,255,255,1) 90%);
+    -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+            box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .names {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.30);
+  }
+
+  .btn:first-letter {
+    text-transform: uppercase;
+  }
+
+  .btn-secondary {
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  }
+
+  .navbar {
+    -webkit-box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+            box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 0%;
+  }
+
+  .navbar-collapse {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .sprite-container {
+    background: rgb(74,167,11);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(74,167,11,0.6965161064425771)), color-stop(38%, rgba(40,154,0,0.6629026610644257)), color-stop(56%, rgba(249,252,9,0.17270658263305327)), to(rgba(0,247,255,0.654499299719888)));
+    background: -o-linear-gradient(bottom, rgba(74,167,11,0.6965161064425771) 0%, rgba(40,154,0,0.6629026610644257) 38%, rgba(249,252,9,0.17270658263305327) 56%, rgba(0,247,255,0.654499299719888) 100%);
+    background: linear-gradient(360deg, rgba(74,167,11,0.6965161064425771) 0%, rgba(40,154,0,0.6629026610644257) 38%, rgba(249,252,9,0.17270658263305327) 56%, rgba(0,247,255,0.654499299719888) 100%);
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.55);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.55);
+  }
+
+  .pokemon-sprite {
+    width: 220px;
+  }
+
+  .info-text {
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-left: 40px;
+    color: #181615;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.30);
+  }
+
+  .type-list {
+    text-transform: uppercase;
+    color: #181615;
+  }
+
+  .list-group {
+    -ms-grid-column-align:  right;
+        justify-self:  right;
+  }
+
+  /* Additional responsiveness for best performance on very small screens */
+  @media all and (min-width: 0px) and (max-width: 505px) {
+    .sprite-container {
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+
+    .pokemon-sprite {
+      width: 140px;
+    }
+
+    h1 {
+      font-size: 25px;
+      text-shadow: none;
+    }
+
+    body {
+      font-size: 20px;
+    }
+
+    .info-text {
+      padding-left: 10px;
+      text-shadow: none;
+    }
+  }

@@ -15,6 +15,7 @@ Secondary Color (Fuchsia/Salmon): #B73B64
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -147,6 +148,32 @@ Secondary Color (Fuchsia/Salmon): #B73B64
   .list-group {
     -ms-grid-column-align:  right;
         justify-self:  right;
+  }
+
+  #toTop {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: 1px solid white;
+    outline: none;
+    background-color: #464141;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+  }
+  
+  #toTop:hover {
+    background-color: #555;
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
   }
 
   /* Additional responsiveness for best performance on very small screens */

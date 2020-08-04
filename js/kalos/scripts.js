@@ -130,3 +130,9 @@ pokemonRepository.loadList().then(function() {
         pokemonRepository.addListItem(pokemon);
     });
 });
+
+// "Back To Top" Button
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }

@@ -25,7 +25,7 @@
 
       <div class="row">
         <div class="col">
-          <img src="img/pokedex-header.jpg" class="header-image">
+          <a href="index.html" role="link"><img src="img/pokedex-header.jpg" class="header-image"></a>
         </div>
       </div>
       
@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link selected" role="link" id="kanto" href="index.html">Kanto</a>
+              <a class="nav-link" role="link" id="kanto" href="kanto.html">Kanto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="johto" href="johto.html"">Johto</a>
@@ -57,37 +57,30 @@
             <li class="nav-item">
               <a class="nav-link" role="link" id="alola" href="alola.html">Alola</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" role="link" id="all" href="all.html">(Show All)</a>
+            </li>
           </ul>
         </div>
       </nav>
 
       <div class="region-header">
-        <img src="img/kanto.jpg" class="header-image">
+      </div>
+
+      <div class="region-select">
+        <a href="kanto.html" role="link" id="kanto"><img src="img/kanto-select.jpg" class="header-image splash"></a>
+        <a href="johto.html" role="link" id="johto"><img src="img/johto-select.jpg" class="header-image splash"></a>
+        <a href="hoenn.html" role="link" id="hoenn"><img src="img/hoenn-select.jpg" class="header-image splash"></a>
+        <a href="sinnoh.html" role="link" id="sinnoh"><img src="img/sinnoh-select.jpg" class="header-image splash"></a>
+        <a href="unova.html" role="link" id="unova"><img src="img/unova-select.jpg" class="header-image splash"></a>
+        <a href="kalos.html" role="link" id="kalos"><img src="img/kalos-select.jpg" class="header-image splash"></a>
+        <a href="alola.html" role="link" id="alola"><img src="img/alola-select.jpg" class="header-image splash"></a>
+        <hr>
+        <a href="all.html" role="link" id="all"><img src="img/all-pokemon-select.jpg" class="header-image splash"></a>
       </div>
 
       <div class="row">
         <div class="col">
-          <div id="modal-container">
-                <!-- Bootstrap Modal-->
-            <div class="modal fade" id="pokemonInfo" tabindex="-1" role="dialog" aria-labelledby="ShowPokemonInfo" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title" id="pokemonInfo">Pokemon Info</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body"></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-    
-          <div class="col pokedex">
-            <div class="list-group" id="pokemon-list"></div>
-          </div>
 
           <script
           src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -95,13 +88,15 @@
           crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-          <script src="js/code.min.js"></script>
         </div>
       </div>
 
       <div class="row">
-        <div class="col text-center"><p><h5>This Pokédex app was created by <a href="http://nathankendrick.com">Nathan Kendrick</h5></a></p>
-        <button onclick="topFunction()" id="toTop" title="Back to top">&#8679;</button>
+        <div class="col text-center">
+            <hr>
+            <p><h5>Pokédex app developed by <a href="http://nathankendrick.com">Nathan Kendrick</h5></a></p>
+            <p><h6>View this project's code on GitHub: <a href="https://github.com/nathankendrick/pokedex-js-jquery-app">https://github.com/nathankendrick/pokedex-js-jquery-app</a></h6></p>
+            <p></p><h5><img src="img/buizel.png">Thank you!</h5></p>
         </div>
       </div>
 

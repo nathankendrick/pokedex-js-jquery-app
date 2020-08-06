@@ -36,7 +36,7 @@ var pokemonRepository = (function () {
     function addListItem(pokemon) {
         var listItem = $('#pokemon-list');
 
-        var button = $('<button class="btn btn-secondary btn-block btn-lg" role="button" aria-pressed="false" data-toggle="modal" data-target="#pokemonInfo">' + pokemon.name + '</button>');
+        var button = $('<button class="btn btn-dark btn-block btn-lg" role="button" aria-pressed="false" data-toggle="modal" data-target="#pokemonInfo">' + pokemon.name + '</button>');
         listItem.append(button);
 
         button.on('click', function () {

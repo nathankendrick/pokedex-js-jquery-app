@@ -11,10 +11,10 @@
     animation: fadein 0.8s;
     background: rgb(131,0,0);
     background: radial-gradient(circle, rgba(131,0,0,1) 21%, rgba(180,12,12,1) 90%);
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 600;
-      font-size: 22px;
-      color: #FFFFFF;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #FFFFFF;
   }
 
   @keyframes fadein {
@@ -92,6 +92,25 @@
     background-color: indianred;
   }
 
+  .splash {
+    margin: 2px;
+    border: 7px transparent solid;
+    border-radius: 20px;
+    transition: 150ms;
+  }
+
+  .splash:hover {
+    margin: 2px;
+    border: 7px solid white;
+    transition: 150ms;
+  }
+
+  .region-select {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
   .header-image {
     width: 100%;
     box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
@@ -101,8 +120,8 @@
     padding-top: 10px;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    background: rgb(235,235,235);
-    background: radial-gradient(circle, rgba(235,235,235,1) 21%, rgba(255,255,255,1) 90%);
+    background: rgb(24,24,24);
+    background: radial-gradient(circle, rgba(24,24,24,0.8491771708683473) 0%, rgba(19,19,19,0.6418942577030813) 100%);
     box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.15);
   }
 
@@ -114,8 +133,9 @@
     text-transform: uppercase;
   }
 
-  .btn-secondary {
+  .btn-dark {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+    border: gray 1px solid;
   }
 
   .navbar {

@@ -5,7 +5,7 @@ var pokemonRepository = (function () {
 
     var pokemonList = [];
 
-    var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
+    var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=807';
   
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -36,7 +36,7 @@ var pokemonRepository = (function () {
     function addListItem(pokemon) {
         var listItem = $('#pokemon-list');
 
-        var button = $('<button class="btn btn-secondary btn-block btn-lg" role="button" aria-pressed="false" data-toggle="modal" data-target="#pokemonInfo">' + pokemon.name + '</button>');
+        var button = $('<button class="btn btn-dark btn-block btn-lg" role="button" aria-pressed="false" data-toggle="modal" data-target="#pokemonInfo">' + pokemon.name + '</button>');
         listItem.append(button);
 
         button.on('click', function () {
@@ -55,7 +55,6 @@ var pokemonRepository = (function () {
         }).then(function (details) {
             item.id = details.id;
             item.imageUrl = details.sprites.front_default;
-            item.imageUrl2 = details.sprites.back_default;
             item.height = details.height/10*3.28084;
             item.abilities = details.abilities.map(function(object) {
                 return ' ' + object.ability.name;
@@ -87,7 +86,7 @@ var pokemonRepository = (function () {
 
         //modal content (Pokemon Data)
         var pokemonName = $('<h1>' + ' #' + item.id + ': ' + item.name + '</h1>');
-        var pokemonSprite = $('<div class="sprite-container"><img src="' + item.imageUrl2 + '" class="pokemon-sprite"><img src="' + item.imageUrl + '" class="pokemon-sprite"></div>');
+        var pokemonSprite = $('<div class="sprite-container"><img src="' + item.imageUrl + '" class="pokemon-sprite"></div>');
         var pokemonHeight = $('<p class="info-text">' + 'Height: ' + item.height.toFixed(1) + ' Ft</p>');
         var pokemonTypes = $('<p class="info-text">Type(s): ' + item.types + '</p>');
         var pokemonAbilities = $('<p class="info-text">Abilities: ' +item.abilities + '</p>');
